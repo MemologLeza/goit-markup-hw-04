@@ -5,11 +5,15 @@
   /* Text & BG colors */
   --navy-blue-cl: #2e2f42;
   --slate-cl: #434455;
+  --light-slate-cl: #8e8f99;
   --cornflower-cl: #e7e9fc;
   --irirs-cl: #4d5ae5;
   --ocean-cl: #404bbf;
   --cloud-cl: #f4f4fd;
   --light-cl: #ffffff;
+  --grey-cl: rgba(46, 47, 66, 0.7);
+  --green-cl: #31d0aa;
+  --light-dark-cl: rgba(255, 255, 255, 0.1);
   /* others */
   --indent: 24px;
   --items: 3;
@@ -88,7 +92,7 @@ button {
 }
 .portfolio-btn {
   color: var(--irirs-cl);
-  background-color: var(--cornflower-cl);
+  background-color: var(--cloud-cl);
   border: 1px solid var(--cornflower-cl);
   border-radius: 4px;
   padding: 11px 23px;
@@ -180,9 +184,25 @@ button {
 }
 /* hero-section */
 .hero {
+  /* background-color: var(--navy-blue-cl);
+  padding-top: 188px;
+  padding-bottom: 188px; */
+}
+.hero {
   background-color: var(--navy-blue-cl);
   padding-top: 188px;
   padding-bottom: 188px;
+
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/main_page/hero/img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-title {
   align-items: center;
@@ -208,6 +228,17 @@ button {
 }
 .main-item {
   flex-basis: calc((100% - var(--indent) * var(--items)) / (var(--items) + 1));
+}
+.main-item-wrap-icon {
+  background-color: var(--cloud-cl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
+.main-item-icon {
 }
 .main-item-title {
   font-weight: 500;
@@ -277,12 +308,70 @@ button {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: var(--slate-cl);
+  margin-bottom: 8px;
 }
 .team-card-desc {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--irirs-cl);
+  border-radius: 50%;
+}
+.team-item:hover .social-link,
+.team-item:focus .social-link {
+  background-color: var(--ocean-cl);
+}
+.social-icon {
+}
+/* Customers */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.customers-title {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.customers-item {
+}
+.customers-link {
+  border: 1px solid var(--light-slate-cl);
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customers-icon {
+  fill: var(--light-slate-cl);
+}
+.customers-link:focus,
+.customers-link:hover {
+  border: 1px solid var(--ocean-cl);
+}
+.customers-link:focus .customers-icon,
+.customers-link:hover .customers-icon {
+  fill: var(--ocean-cl);
+}
 /* Footer */
 .footer {
   background-color: var(--navy-blue-cl);
@@ -299,7 +388,38 @@ button {
   letter-spacing: 0.02em;
   color: var(--cornflower-cl);
   width: 264px;
+  /* margin-top: 16px; */
+}
+.footer-container {
+  display: flex;
+  justify-content: left;
+  gap: 120px;
   margin-top: 16px;
+}
+.social-title {
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: var(--light-cl);
+  margin-bottom: 16px;
+}
+.social-list-footer {
+  display: flex;
+  gap: 16px;
+}
+.social-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--light-dark-cl);
+  border-radius: 50%;
+}
+.social-link-footer:hover,
+.social-link-footer:hover {
+  background-color: var(--green-cl);
 }
 /* Portfolio page */
 /* Page title  */
@@ -351,4 +471,11 @@ button {
   padding-left: 16px;
   border: 1px solid var(--cornflower-cl);
   border-top: none;
+}
+.project-card-item:hover .project-card-desc,
+.project-card-item:focus .project-card-desc {
+  border: 0.5px solid var(--cloud-cl);
+  border-top: none;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
