@@ -474,16 +474,14 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-}
-.project-card-link {
-  display: block;
-
   border: 1px solid var(--cornflower-cl);
   border-top: none;
 }
+.project-card-link {
+}
 
-.project-card-link:hover,
-.project-card-link:focus {
+.project-card-link:hover .project-card-desc,
+.project-card-link:focus .project-card-desc {
   border: 0.5px solid var(--cloud-cl);
   border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
