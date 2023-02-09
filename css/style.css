@@ -234,8 +234,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  width: 264px;
+  height: 112px;
   margin-bottom: 8px;
 }
 .main-item-icon {
@@ -329,8 +329,8 @@ button {
   background-color: var(--irirs-cl);
   border-radius: 50%;
 }
-.team-item:hover .social-link,
-.team-item:focus .social-link {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--ocean-cl);
 }
 .social-icon {
@@ -379,6 +379,9 @@ button {
   padding-bottom: 100px;
   padding-left: 0;
 }
+.footer-logo {
+  /* margin-bottom: 16px; */
+}
 .footer-logo-part {
   color: var(--cloud-cl);
 }
@@ -388,13 +391,12 @@ button {
   letter-spacing: 0.02em;
   color: var(--cornflower-cl);
   width: 264px;
-  /* margin-top: 16px; */
+  margin-top: 16px;
 }
 .footer-container {
   display: flex;
   justify-content: left;
   gap: 120px;
-  margin-top: 16px;
 }
 .social-title {
   font-size: 16px;
@@ -418,7 +420,7 @@ button {
   border-radius: 50%;
 }
 .social-link-footer:hover,
-.social-link-footer:hover {
+.social-link-footer:focus {
   background-color: var(--green-cl);
 }
 /* Portfolio page */
@@ -452,12 +454,15 @@ button {
 }
 .project-card-item {
 }
+.project-card-img {
+}
 .project-card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  color: var(--navy-blue-cl);
 }
 .project-card-txt {
   font-size: 16px;
@@ -469,11 +474,16 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
+}
+.project-card-link {
+  display: block;
+
   border: 1px solid var(--cornflower-cl);
   border-top: none;
 }
-.project-card-item:hover .project-card-desc,
-.project-card-item:focus .project-card-desc {
+
+.project-card-link:hover,
+.project-card-link:focus {
   border: 0.5px solid var(--cloud-cl);
   border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
